@@ -11,6 +11,10 @@ struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
+            //trigger the function to set local notification
+            // you can even do this in AppDelegate
+            .onAppear(perform: { notifications(hour: 10, minute: 0, second: 0)
+            })
     }
 }
 
